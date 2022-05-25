@@ -1,7 +1,7 @@
-import Project1 from '../assets/crypto.png'
-import Project2 from '../assets/nintendo.png'
-import Project3 from '../assets/fitness.png'
-import Project4 from '../assets/portfolio.png'
+import Project1 from '../assets/port1.png'
+import Project2 from '../assets/port2.png'
+import Project3 from '../assets/port3.png'
+import Project4 from '../assets/port4.png'
 
 const projectData = [
     {
