@@ -2,13 +2,15 @@ import Project1 from '../assets/port1.png'
 import Project2 from '../assets/port2.png'
 import Project3 from '../assets/port3.png'
 import Project4 from '../assets/port4.png'
+import Project5 from '../assets/port5.png'
+import Project6 from '../assets/port6.png'
 
 const projectData = [
     {
         image: Project1,
-        name: 'ThirdWeb Crypto Exchange',
-        demo: 'https://github.com/DevGragy/ThirdWeb-Coinbase',
-        code: 'https://github.com/DevGragy/ThirdWeb-Coinbase',
+        name: 'Ecommerce de Anime',
+        demo: 'https://que-otako.netlify.app/',
+        code: 'https://github.com/DevGragy/QueOtako',
     },
     {
         image: Project2,
@@ -29,7 +31,19 @@ const projectData = [
         demo: 'https://devgragy.github.io/Portafolio/',
         code: 'https://github.com/DevGragy/Portafolio',
     },
+    {
+        image: Project5,
+        name: 'Bienes Raices',
+        demo: 'https://dhamcastell.com.mx',
+        code: 'https://github.com/DevGragy/DhamCastell',
+    },
     
+    {
+        image: Project6,
+        name: 'GetMactha Clone',
+        demo: 'https://devgragy.github.io/Get-Matcha/',
+        code: 'https://github.com/DevGragy/Get-Matcha',
+    },
 ]
 
 export default projectData;

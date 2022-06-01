@@ -12,10 +12,13 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-slate-900 text-gray-300 ">
       <div>
-        <div className="flex items-center text-4xl font-semibold text-red-600 cursor-pointer">
+        <a
+          href="/"
+          className="flex items-center text-4xl font-semibold text-red-600 cursor-pointer"
+        >
           <FaDev className="text-6xl " />
           <span className="text-white">JayMx</span>
-        </div>
+        </a>
       </div>
 
       <ul className="hidden md:flex">
@@ -26,7 +29,7 @@ const Navbar = () => {
         </li>
         <li className="hover:text-red-500 duration-200">
           <Link to="about" smooth={true} duration={500}>
-            Quien Soy
+            ¿Quién soy?
           </Link>
         </li>
         <li className="hover:text-red-500 duration-200">
@@ -36,7 +39,7 @@ const Navbar = () => {
         </li>
         <li className="hover:text-red-500 duration-200">
           <Link to="skills" smooth={true} duration={500}>
-            Tecnologias
+            Tecnologías
           </Link>
         </li>
         <li className="hover:text-red-500 duration-200">
@@ -66,17 +69,22 @@ const Navbar = () => {
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
           <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-            Quien Soy
+            ¿Quién soy?
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
-          <Link onClick={handleClick} to="portfolio" smooth={true} duration={500}>
+          <Link
+            onClick={handleClick}
+            to="portfolio"
+            smooth={true}
+            duration={500}
+          >
             Mi Trabajo
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
           <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-            Tecnologias
+            Tecnologías
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
