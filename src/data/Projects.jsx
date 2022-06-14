@@ -34,8 +34,8 @@ const projectData = [
     {
         image: Project5,
         name: 'Bienes Raices',
-        demo: 'https://dhamcastell.com.mx',
-        code: 'https://github.com/DevGragy/DhamCastell',
+        demo: 'https://bienesraices-devjay.netlify.app',
+        code: 'https://github.com/DevGragy/',
     },
     
     {

@@ -2,7 +2,7 @@
   "name": "devjaymx",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://devgragy.github.io",
+  "homepage": "https://www.devjaymx.com/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
