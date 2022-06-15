@@ -5,7 +5,6 @@ const Contact = () => {
       className=" w-full h-screen flex justify-center items-center p-4 mt-[120px] sm:mt-0"
     >
       <form
-        // action="https://getform.io/f/4b61f4b7-3f3d-47bf-98d6-89e344688545"
         action="mail.php"
         method="POST"
         className=" flex flex-col max-w-[600px] w-full text-center"
@@ -23,19 +22,19 @@ const Contact = () => {
           className=" bg-[#ccd6f6] p-2 focus:bg-gray-50 rounded"
           type="text"
           placeholder="Nombre"
-          name="Nombre"
+          name="name"
           required
         />
         <input
           className=" bg-[#ccd6f6] my-4 p-2 focus:bg-gray-50 rounded"
           type="email"
           placeholder="Correo"
-          name="Email"
+          name="email"
           required
         />
         <textarea
           className="bg-[#ccd6f6] p-2 focus:bg-gray-50 rounded"
-          name="Mensaje"
+          name="message"
           rows="10"
           placeholder="Mensaje"
           required

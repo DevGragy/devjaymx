@@ -1,15 +1,15 @@
 <?php
 
-    $name = $_POST['Nombre'];
-    $email = $_POST['Email'];
-    $message = $_POST['Mensaje'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $to = "devjaymx@gmail.com";
 
-    $mailheader = "De:".$name."<".$email.">\r\n";
+    $headers = "From: $email  \r\n";
+    $email_subject = "Contacto por formulario web";
+    $email_body = "Hola, mucho gusto me llamo $name.\n\n".$message;
 
-    $recipient = "devjaymx@gmail.com";
+    mail($to, $email_subject, $email_body, $headers);
 
-    mail($recipient, $name, $message, $mailheader)
-    or die("Error!");
-
-    echo("Mensaje enviado");
+    header("Location: https://devjaymx.com");
 ?>
