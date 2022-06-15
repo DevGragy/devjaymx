@@ -5,7 +5,8 @@ const Contact = () => {
       className=" w-full h-screen flex justify-center items-center p-4 mt-[120px] sm:mt-0"
     >
       <form
-        action="https://getform.io/f/4b61f4b7-3f3d-47bf-98d6-89e344688545"
+        // action="https://getform.io/f/4b61f4b7-3f3d-47bf-98d6-89e344688545"
+        action="mail.php"
         method="POST"
         className=" flex flex-col max-w-[600px] w-full text-center"
       >
