@@ -2,8 +2,8 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaDev, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { Link } from "react-scroll";
 import CV from "../assets/CV.png";
+import Logo from "../assets/Logo-Black.png"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -16,36 +16,35 @@ const Navbar = () => {
           href="/"
           className="flex items-center text-4xl font-semibold text-red-600 cursor-pointer"
         >
-          <FaDev className="text-6xl " />
-          <span className="text-white">JayMx</span>
+          <img src={Logo} alt="DevJayMx" className="w-[180px] md:w-[200px]" />
         </a>
       </div>
 
       <ul className="hidden md:flex">
         <li className="hover:text-red-500 duration-200">
-          <Link to="home" smooth={true} duration={500}>
+          <a href="#home" >
             Inicio
-          </Link>
+          </a>
         </li>
         <li className="hover:text-red-500 duration-200">
-          <Link to="about" smooth={true} duration={500}>
+          <a href="#about" >
             ¿Quién soy?
-          </Link>
+          </a>
         </li>
         <li className="hover:text-red-500 duration-200">
-          <Link to="portfolio" smooth={true} duration={500}>
+          <a href="#portfolio" >
             Mi Trabajo
-          </Link>
+          </a>
         </li>
         <li className="hover:text-red-500 duration-200">
-          <Link to="skills" smooth={true} duration={500}>
+          <a href="#skills" >
             Tecnologías
-          </Link>
+          </a>
         </li>
         <li className="hover:text-red-500 duration-200">
-          <Link to="contact" smooth={true} duration={500}>
+          <a href="#contact" >
             Contacto
-          </Link>
+          </a>
         </li>
       </ul>
 
@@ -59,38 +58,38 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center duration-500"
         }
       >
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
-          <Link onClick={handleClick} to="home" smooth={true} duration={500}>
+          <a onClick={handleClick} href="#home" >
             Inicio
-          </Link>
+          </a>
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
-          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+          <a onClick={handleClick} href="#about" >
             ¿Quién soy?
-          </Link>
+          </a>
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
-          <Link
+          <a
             onClick={handleClick}
-            to="portfolio"
+            href="#portfolio"
             smooth={true}
             duration={500}
           >
             Mi Trabajo
-          </Link>
+          </a>
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
-          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+          <a onClick={handleClick} href="#skills" >
             Tecnologías
-          </Link>
+          </a>
         </li>
         <li className="py-6 text-4xl hover:text-red-500 duration-200">
-          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
+          <a onClick={handleClick} href="#contact" >
             Contacto
-          </Link>
+          </a>
         </li>
       </ul>
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">

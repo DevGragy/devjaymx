@@ -3,16 +3,16 @@ import projectData from "../data/Projects";
 const Portfolio = () => {
   return (
     <main
-      name="portfolio"
-      className="w-full md:h-screen text-gray-300 mt-[120px] sm:mt-0"
+      id="portfolio"
+      className="w-full h-full text-gray-300 mt-[120px] sm:mt-0"
     >
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-min-[100vh]">
         <div className="pb-8 text-center">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-red-500">
+          <p className="text-3xl sm:text-4xl font-bold inline border-b-4 text-gray-300 border-red-500">
             Mi Trabajo
           </p>
           <p className="py-6 text-lg font-medium">
-            {`{ Échale un vistazo a algunos de mis proyectos }`}
+            {`Échale un vistazo a algunos de mis proyectos`}
           </p>
         </div>
 
