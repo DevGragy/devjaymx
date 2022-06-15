@@ -2,14 +2,14 @@ import techStack from "../data/Technologies";
 
 const Skills = () => {
   return (
-    <section name="skills" className="w-full h-screen text-gray-300 mt-[240px] sm:mt-0">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full text-center">
+    <section id="skills" className="w-full h-full text-gray-300 mt-[240px] ">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-screen text-center">
         <div>
-          <p className="text-4xl font-bold inline border-b-4 border-red-500">
+          <p className="text-3xl sm:text-4xl font-bold inline border-b-4 border-red-500">
             Tecnologías
           </p>
           <p className="py-4 text-lg font-medium">
-          {`{ Éstas son las tecnologías con las que trabajo }`}
+          {`Éstas son las tecnologías con las que trabajo`}
           </p>
         </div>
 

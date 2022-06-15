@@ -1,29 +1,28 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { Link } from "react-scroll";
 
 const Home = () => {
   return (
-    <section name="home" className="w-full h-screen">
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-center">
-        <h3 className="text-red-500 text-xl pb-1 mt-8 md:text-2xl">
+    <section id="home" className="w-full h-full">
+      <div className="max-w-[1000px] mx-auto  px-8 flex flex-col justify-center h-screen text-center">
+        <h3 className="text-red-500 text-xl pb-1 mt-[72px] sm:mt-16 md:text-2xl">
           Hola, mi nombre es
         </h3>
-        <h1 className="text-4xl sm:text-7xl font-bold text-gray-300 mb-4">
+        <h1 className="text-3xl sm:text-7xl font-bold text-gray-200 mb-4">
           Elías García
         </h1>
-        <h2 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6] mt-4">
+        <h2 className="text-3xl sm:text-7xl font-bold text-blue-500 mt-4">
           Soy Desarrollador Web
         </h2>
-        <p className="text-white pt-12 pb-8 text-xl">
+        <p className="text-white pt-12 pb-8 text-lg sm:text-xl">
           Me dedico al desarrollo de sitios web utilizando tecnologías modernas
           para crear páginas de calidad en donde mis clientes encuentran justo
           lo que necesitan para hacer crecer sus negocios.
         </p>
         <div className="flex justify-center">
           <button className="group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-red-500 text-lg duration-300 ">
-            <Link to="portfolio" smooth={true} duration={500}>
+            <a href="#portfolio" className="text-md sm:text-md md:text-lg">
               Mira mis trabajos
-            </Link>
+            </a>
             <span className="group-hover:rotate-90 duration-300">
               <HiArrowNarrowRight className="ml-2" />
             </span>
