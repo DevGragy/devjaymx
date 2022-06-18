@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaDev, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import CV from "../assets/CV.png";
-import Logo from "../assets/Logo-Black.png"
+import Logo from "../assets/logo-dos.png"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);

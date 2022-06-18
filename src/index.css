@@ -17,6 +17,12 @@
     }
 }
 
+@layer components {
+    .contact-buttons {
+        @apply bg-[#ccd6f6] p-2 appearance-none border-2 border-black focus:outline-none focus:bg-zinc-50 focus:border-blue-500 leading-tight rounded
+    }
+}
+
 .content-div {
     background-repeat: no-repeat;
     background-size: cover;
