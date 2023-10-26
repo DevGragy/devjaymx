@@ -2,7 +2,7 @@ import { FaBars, FaTimes, FaDev, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
-import CV from "../assets/CV.png";
+import CV from "../assets/CV.pdf";
 
 const Footer = () => {
   return (

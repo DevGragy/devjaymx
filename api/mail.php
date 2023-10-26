@@ -1,12 +1,12 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: Content-Type");
-header('Access-Control-Allow-Methods:  POST, GET');
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Max-Age: 86400');
+}
 
 $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json, true);
-
-if (empty($_POST['name']) && empty($_POST['email']) && empty($_POST['message'])) die();
 
 if ($_POST) {
     http_response_code(200);
@@ -26,7 +26,7 @@ if ($_POST) {
     echo json_encode(array(
         "sent" => true
     ));
-    header("Location: https://devjaymx.com");
+    header("Location: http://devjaymx.com/");
 } else {
     echo json_encode(["sent" => false, "message" => "Algo salio mal"]);
 }

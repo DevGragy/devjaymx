@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const Contact = ({}) => {
+const Contact = () => {
     const initialValues = { name: "", email: "", message: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
@@ -19,15 +19,18 @@ const Contact = ({}) => {
         try {
             const response = await axios({
                 method: "post",
-                url: "https://devjaymx.com/api/mail.php",
+                url: "http://devjaymx.com/api/mail.php",
                 data: formValues,
-                headers: { "content-type": "application/json" },
+                headers: {
+                    "Access-Control-Allow-Origin":
+                        "http://devjaymx.com/api/mail.php",
+                    "Content-Type": "application/json",
+                },
             });
+            console.log(response);
             if (response) {
-                console.log(formValues);
                 setFormErrors(validate(formValues));
                 setIsSubmit(true);
-                console.log(response);
             }
         } catch (error) {
             Swal.fire({
