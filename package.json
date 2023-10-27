@@ -9,15 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@mui/icons-material": "^5.14.15",
+    "@mui/material": "^5.14.15",
+    "@mui/styles": "^5.14.15",
     "autoprefixer": "^10.4.7",
     "axios": "^0.27.2",
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
     "gh-pages": "^4.0.0",
+    "mdb-react-ui-kit": "^6.3.0",
     "postcss": "^8.4.13",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
+    "react-material-ui-carousel": "^3.4.2",
     "react-scroll": "^1.8.7",
     "sweetalert2": "^11.4.17",
     "tailwindcss": "^3.0.24"

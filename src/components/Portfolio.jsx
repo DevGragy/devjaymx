@@ -1,4 +1,7 @@
 import projectData from "../data/Projects";
+import Carousel from "react-material-ui-carousel";
+import CarouselItem from "./CarouselItem";
+import "./Carousel.css";
 
 const Portfolio = () => {
     return (
@@ -12,45 +15,54 @@ const Portfolio = () => {
                         Mi Trabajo
                     </p>
                     <p className="py-6 text-lg font-medium">
-                        {`Échale un vistazo a algunos de mis proyectos`}
+                        {`Mira algunos de mis proyectos`}
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2  gap-4">
-                    {projectData.map((project, idx) => (
-                        <div
-                            key={idx}
-                            style={{ backgroundImage: `url(${project.image})` }}
-                            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-                        >
-                            <div className="opacity-0 group-hover:opacity-100 duration-500 text-center">
-                                <span className="text-xl font-bold text-white tracking-wider ">
-                                    {project.name}
-                                </span>
-                                <div className="pt-8 text-center  ">
-                                    <a
-                                        href={project.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg ">
-                                            Ver
-                                        </button>
-                                    </a>
-                                    <a
-                                        href={project.code}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg ">
-                                            Código
-                                        </button>
-                                    </a>
-                                </div>
+                <Carousel
+                    className="showcase"
+                    navButtonsAlwaysVisible={true}
+                    animation="slide"
+                >
+                    {projectData.map((project, i) => (
+                        // <CarouselItem
+                        //     key={i}
+                        //     image={project.image}
+                        //     name={project.name}
+                        //     preview={project.demo}
+                        //     urlToCode={project.code}
+                        //     className="showcase__div"
+                        // />
+                        <div className="grid place-items-center" key={i}>
+                            <img
+                                src={project.image}
+                                alt={project.name}
+                                className="w-full h-72 sm:h-full"
+                            />
+                            <h3 className="my-4 font-bold text-lg">
+                                {project.name}
+                            </h3>
+                            <div className="flex justify-between">
+                                <a
+                                    href={project.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                >
+                                    Ver
+                                </a>
+                                <a
+                                    href={project.code}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                >
+                                    Código
+                                </a>
                             </div>
                         </div>
                     ))}
-                </div>
+                </Carousel>
             </div>
         </main>
     );

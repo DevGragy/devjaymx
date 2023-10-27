@@ -1,0 +1,35 @@
+.showcase {
+    margin-top: 2em;
+}
+
+.showcase__div {
+    display: grid;
+    place-items: center;
+}
+
+.showcase__div img {
+    max-height: 500px;
+}
+
+.showcase__div h3 {
+    /* Estilos para el título del proyecto */
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.showcase__div a {
+    /* Estilos para los botones de acción */
+    margin: 8px;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.showcase__div a:hover {
+    background-color: #005ea4;
+}
