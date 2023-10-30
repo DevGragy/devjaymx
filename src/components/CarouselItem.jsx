@@ -1,41 +1,27 @@
-import React from "react";
+import './Carousel.css'
 
-const CarouselItem = ({ name, image, urlToCode, preview }) => {
+const CarouselItem = ({ name, image, code, demo }) => {
     return (
-        // <Paper>
-        //     <img src={image} alt={name} />
-        //     <h2>{name}</h2>
-        //     <Button href={liveCode}>Ver</Button>
-        //     <Button href={urlToCode}>Codigo</Button>
-        // </Paper>
-        <div
-            style={{ backgroundImage: `url(${image})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-        >
-            <div className="opacity-0 group-hover:opacity-100 duration-500 text-center">
-                <span className="text-xl font-bold text-white tracking-wider ">
-                    {name}
-                </span>
-                <div className="pt-8 text-center  ">
-                    <a
-                        href={preview}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg ">
-                            Ver
-                        </button>
-                    </a>
-                    <a
-                        href={urlToCode}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg ">
-                            Código
-                        </button>
-                    </a>
-                </div>
+        <div className="flex justify-center items-center flex-col">
+            <img src={image} alt={name} className="h-full md:h-[500px]" />
+            <h3 className="my-4 font-bold text-lg">{name}</h3>
+            <div className="flex flex-col text-center sm:flex-row justify-between">
+                <a
+                    href={demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                >
+                    Ver
+                </a>
+                <a
+                    href={code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                >
+                    Código
+                </a>
             </div>
         </div>
     );

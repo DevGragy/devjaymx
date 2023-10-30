@@ -15,32 +15,30 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setFormErrors(validate(formValues));
 
         try {
             const response = await axios({
                 method: "post",
-                url: "http://devjaymx.com/api/mail.php",
+                url: "http://localhost:3000/api/mail.php",
                 data: formValues,
                 headers: {
                     "Access-Control-Allow-Origin":
-                        "http://devjaymx.com/api/mail.php",
+                        "http://localhost:3000/api/mail.php",
                     "Content-Type": "application/json",
                 },
             });
-            console.log(response);
             if (response) {
-                setFormErrors(validate(formValues));
+                console.log(response.status);
                 setIsSubmit(true);
             }
         } catch (error) {
             Swal.fire({
-                position: "top-end",
                 icon: "error",
-                title: "Hubo un error inesperado",
+                title: "Hubo un error con el servidor...",
                 showConfirmButton: false,
                 timer: 3000,
             });
-            console.log(error);
         }
     };
 
@@ -51,7 +49,6 @@ const Contact = () => {
         if (!values.name) {
             errors.name = "Nombre obligatorio!";
             Swal.fire({
-                position: "top-end",
                 icon: "error",
                 title: "Nombre obligatorio!",
                 showConfirmButton: false,
@@ -61,7 +58,6 @@ const Contact = () => {
         if (!values.email) {
             errors.email = "Email obligatorio!";
             Swal.fire({
-                position: "top-end",
                 icon: "error",
                 title: "Email obligatorio!",
                 showConfirmButton: false,
@@ -70,7 +66,6 @@ const Contact = () => {
         } else if (!regex.test(values.email)) {
             errors.email = "Ingrese un email valido!";
             Swal.fire({
-                position: "top-end",
                 icon: "error",
                 title: "Ingrese un email valido!",
                 showConfirmButton: false,
@@ -80,7 +75,6 @@ const Contact = () => {
         if (!values.message) {
             errors.message = "Mensaje obligatorio!";
             Swal.fire({
-                position: "top-end",
                 icon: "error",
                 title: "Mensaje obligatorio!",
                 showConfirmButton: false,
@@ -89,10 +83,10 @@ const Contact = () => {
         }
 
         if (!values.name && !values.email && !values.message) {
+            errors.values = "Todos los campos son obligatorios";
             Swal.fire({
-                position: "top-end",
                 icon: "error",
-                title: "Error en alguno de los campos",
+                title: "Todos los campos son obligatorios",
                 showConfirmButton: false,
                 timer: 3000,
             });
@@ -103,7 +97,6 @@ const Contact = () => {
     useEffect(() => {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
             Swal.fire({
-                position: "top-end",
                 icon: "success",
                 title: "Email enviado!",
                 showConfirmButton: false,
@@ -127,10 +120,13 @@ const Contact = () => {
                         Contacto
                     </p>
                     <p className=" text-gray-300 my-4 text-lg font-medium">
-                        {`Envía el siguiente formulario o envíame un correo -
-            devjaymx@gmail.com`}
+                        Envía el siguiente formulario o envíame un correo -
+                        devjaymx@gmail.com
                     </p>
                 </div>
+                <p className=" text-center text-red-500 mt-2">
+                    {formErrors.values}
+                </p>
                 <input
                     className={
                         !formErrors.name

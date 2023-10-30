@@ -26,7 +26,7 @@ if ($_POST) {
     echo json_encode(array(
         "sent" => true
     ));
-    header("Location: http://devjaymx.com/");
+    header("Location: localhost:3000/");
 } else {
     echo json_encode(["sent" => false, "message" => "Algo salio mal"]);
 }
